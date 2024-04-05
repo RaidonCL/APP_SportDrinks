@@ -1,0 +1,7 @@
+{
+  "name": "APP_SportDrinks",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

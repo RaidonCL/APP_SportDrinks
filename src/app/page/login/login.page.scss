@@ -1,0 +1,12 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  ion-button {
+    --ion-color-base: #000000; 
+    --ion-color-contrast: #ffffff; 
+    width: 150px; 
+  }
