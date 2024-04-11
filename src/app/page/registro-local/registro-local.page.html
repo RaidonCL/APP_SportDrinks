@@ -1,13 +1,13 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Registro</ion-title>
+    <ion-title>Registro local</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
   <ion-item>
     <ion-label position="floating">Nombre</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" pattern="[A-Za-z ]+" required></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Dirección</ion-label>
@@ -15,26 +15,26 @@
   </ion-item>
   <ion-item>
     <ion-label position="floating">Correo</ion-label>
-    <ion-input type="email"></ion-input>
+    <ion-input type="email" required></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">RUT</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" pattern="\d{1,2}\.\d{3}\.\d{3}-[\d|kK]" required></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Teléfono</ion-label>
-    <ion-input type="tel"></ion-input>
+    <ion-input type="tel" minlength="9" required></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Contraseña</ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-input type="password" minlength="6" required></ion-input>
   </ion-item>
   <ion-row class="ion-margin-top">
     <ion-col>
       <ion-button color="dark" expand="block" routerLink="/principal">Atrás</ion-button>
     </ion-col>
     <ion-col>
-      <ion-button color="primary" expand="block">Registrarse</ion-button>
+      <ion-button color="primary" expand="block" (click)="validarRegistro()">Registrarse</ion-button>
     </ion-col>
   </ion-row>
 </ion-content>
