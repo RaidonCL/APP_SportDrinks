@@ -37,16 +37,17 @@
     <h1 class="news-title">Últimas Noticias</h1>
     <div class="news-container">
       <!-- Noticias -->
-        <ion-card>
-          <img alt="Silhouette of mountains" src="assets/img/gareca.jpg" />
-          <ion-card-header>
-            <ion-card-title>Recordaron a Marcelo Bielsa": La primera exigencia de Ricardo Gareca en La Roja</ion-card-title>
-          </ion-card-header>
-        
-          <ion-card-content>
-            El nuevo técnico de la Selección, tras visitar las instalaciones de Juan Pinto Durán, pidió una "recámara con vista a las canchas"
-          </ion-card-content>
-        </ion-card>
+      <ion-card>
+        <img alt="Silhouette of mountains" src="assets/img/gareca.jpg" />
+        <ion-card-header>
+          <ion-card-title>Recordaron a Marcelo Bielsa: La primera exigencia de Ricardo Gareca en La Roja</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          El nuevo técnico de la Selección, tras visitar las instalaciones de Juan Pinto Durán, pidió una "recámara con vista a las canchas"
+        </ion-card-content>
+        <!-- Icono de corazón más grande -->
+        <ion-icon [name]="isLiked ? 'heart' : 'heart-outline'" (click)="likePost()" color="danger" size="large"></ion-icon>
+      </ion-card>
     </div>
   </ion-content>
 </div>
