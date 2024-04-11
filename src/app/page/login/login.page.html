@@ -3,10 +3,22 @@
     <ion-title>Bienvenido SportDrinks</ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Iniciar sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content class="ion-padding">
-  <div class="button-container">
-    <ion-button color="primary" routerLink="/deportistas">Deportistas</ion-button>
-    <ion-button color="primary" routerLink="/locales">Locales</ion-button>
-  </div>
+  <ion-item>
+    <ion-label position="floating">Correo electrónico</ion-label>
+    <ion-input type="email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="login()">Iniciar sesión</ion-button>
 </ion-content>

@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage implements OnInit {
+export class LoginPage {
+  email: string = '';
+  password: string = '';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit() {
+  login() {
+    // Aquí puedes implementar la lógica para verificar el inicio de sesión
+    // Por ejemplo, puedes verificar el correo y la contraseña en una base de datos o servicio de autenticación
+    // Si el inicio de sesión es exitoso, puedes redirigir a otra página
+    this.router.navigate(['/inicio']);
   }
-
 }
